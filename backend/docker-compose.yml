@@ -1,0 +1,39 @@
+version: '3'
+services:
+  todo_postgres:
+    image: postgres
+    container_name: todo_postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=todo
+    ports:
+      - 5434:5432
+    networks:
+      - todo_local
+  todo_postgres_test:
+    image: postgres
+    container_name: todo_postgres_test
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=todo_test
+    ports:
+      - 5435:5432
+    networks:
+      - todo_local
+  todo_be_app:
+    build:
+      context: ""
+      dockerfile: ./Dockerfile
+    image: todo_be
+    depends_on:
+      - todo_postgres
+    environment:
+      - NODE_ENV=prod
+    ports:
+      - 3007:3007
+    networks:
+      - todo_local
+networks:
+  todo_local:

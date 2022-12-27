@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+	.dot {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		cursor: pointer;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+	.titleTable {
+		::global {
+			.ant-table
+				.ant-table-container
+				.ant-table-content
+				table
+				thead.ant-table-thead
+				.ant-table-cell {
+				background-color: green;
+			}
+		}
+	}
+	.borderSubmit {
+		border: 1px solid #7f17fb;
+	}
+	.shadow {
+		-webkit-box-shadow: 2px 0px 19px 1px #000000;
+		box-shadow: 2px 0px 19px 1px #000000;
+	}
+	.deleteIcon {
+		color: red !important;
+	}
+	.editIcon {
+		color: blue !important;
+	}
+	.active {
+		font-weight: 600;
+		color: blue !important;
+	}
+	.edit {
+		border: none !important;
+		background-color: #666766 !important;
+	}
+	.positionCenter {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.default {
+		margin: 0;
+		padding: 0;
+	}
+	.searchWidth {
+		width: 15.5rem;
+	}
+	.wordBreak {
+		display: block !important;
+		max-width: 180px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+	.search {
+		padding: 8px !important;
+	}
+	.btnSearch {
+		margin-bottom: 8px !important;
+		display: block !important;
+	}
+}
+@layer base {
+	h1 {
+		@apply text-2xl font-bold;
+	}
+	h2 {
+		@apply text-xl font-bold;
+	}
+	h3 {
+		@apply text-lg font-bold;
+	}
+	h4 {
+		@apply text-base font-bold;
+	}
+	h5 {
+		@apply text-sm font-bold;
+	}
+	h6 {
+		@apply text-xs font-bold;
+	}
+}
+@layer components {
+	.btn {
+		@apply border-2 border-primary px-4 py-2 rounded uppercase text-xl font-semibold cursor-pointer;
+	}
+}
+.section-container {
+	@apply max-w-full mx-auto;
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	src: url('../fonts/avenir-next/Avenir-Next-LT-Pro-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	src: url('../fonts/avenir-next/Avenir-Next-LT-Pro-Demi-Bold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	src: url('../fonts/avenir-next/Avenir-Next-LT-Pro-Demi-Bold.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	src: url('../fonts/avenir-next/Avenir-Next-LT-Pro-Demi-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}

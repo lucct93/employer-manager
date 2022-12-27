@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+DirectoryIndex disabled
+RewriteEngine On
+RewriteBase /
+RewriteRule ^$ https://galactix-zone-staging.netlify.app/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ https://galactix-zone-staging.netlify.app/$1 [P,L]
+RewriteCond %{HTTP_HOST} ^www\.galactix-zone-staging\.netlify.app$
+RewriteRule ^/?$ "http\:\/\/galactix-zone-staging\.netlify.app\/" [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+# landing
+RewriteCond %{REQUEST_URI} .*landing*.
+RewriteCond %{REQUEST_URI} !(\[\[\.\.\.landing\]\])
+RewriteRule (.*) /landing/[[...landing]].html?p=$1 [L]
+</IfModule>

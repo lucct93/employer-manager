@@ -1,0 +1,11 @@
+typeorm:
+  type: postgres
+  host: todo_postgres
+  username: postgres
+  password: password
+  port: 5432
+  database: todo
+  entities: []
+  synchronize: true
+  autoLoadEntities: true
+  logging: false

@@ -1,0 +1,11 @@
+typeorm:
+  type: postgres
+  host: localhost
+  username: postgres
+  password: password
+  port: 5435
+  database: todo_test
+  entities: []
+  synchronize: true
+  autoLoadEntities: true
+  logging: false

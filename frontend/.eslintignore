@@ -1,0 +1,9 @@
+node_modules/
+dist
+build
+*.lock
+*.scss
+*.css
+*.svg
+src/setupTests.js
+src/reportWebVitals.js
