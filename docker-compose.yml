@@ -40,11 +40,11 @@ services:
     build: ./frontend
     image: frontend
     hostname: frontend
+    ports:
+      - 3000:3000
     networks:
       - todo_local
-    ports:
-    - 10014:3000
-    volumes:
-      - ./:/data/www
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
 networks:
   todo_local:

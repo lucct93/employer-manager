@@ -11,18 +11,20 @@ Should use NextJS to make it support server-side rendering.
 
 - As a data source, you can either implement database connectivity with a relational or non-relation database.
 
+**🚨🚨🚨 Please note: This is not a production-ready application**
 ## Getting Started
 
 ###  Architecture
 
 ![Architecture](images/architecture.png)
 
-Technical Stack
-- NestJs / TypeORM
-- NextJS
-- Postgres
-- Jest / Cypress
-- Additional: Husky / Pretty
+**Technical Stack**
+
+    - NestJs / TypeORM
+    - NextJS
+    - Postgres
+    - Jest / Cypress
+    - Additional: Husky / Pretty
 ### Prerequisites
 
 What things you need to install
@@ -34,20 +36,20 @@ What things you need to install
 ### Installing
 #### With Docker
 
-1. Clone the repository
-2. Build docker: `docker-compose build`
-3. Run docker image: `docker-compose up -d`
+    1. Clone the repository
+    2. Build docker: `docker-compose build`
+    3. Run docker image: `docker-compose up -d`
 
 #### Without Docker
 
-1. Clone the repository
-2. Install Postgres ( should revise config folder files )
-3. Go to `backend` Directory
-4. Install dependencies: `yarn`
-5. Start service at port 3007: `yarn start:dev`
-6. Go to `frontend` Directory
-7. Install dependencies: `yarn`
-8. Start NextJs at port 3000: `yarn dev`
+    1. Clone the repository
+    2. Install Postgres ( should revise config folder files )
+    3. Go to `backend` Directory
+    4. Install dependencies: `yarn`
+    5. Start service at port 3007: `yarn start:dev`
+    6. Go to `frontend` Directory
+    7. Install dependencies: `yarn`
+    8. Start NextJs at port 3000: `yarn dev`
 
 ## Usage
 
@@ -57,12 +59,12 @@ What things you need to install
 ## Running the tests
 
 ### Backend
-- Run yarn `test:cov`
-- Testing Coverage: > 80%
+    - Run yarn `test:cov`
+    - Testing Coverage: > 80%
 
 ### Frontend
-- Run yarn `test:cov` for Unit Test
-- Run yarn `test:e2e` for e2e Test
+    - Run yarn `test:cov` for Unit Test
+    - Run yarn `test:e2e` for e2e Test
 
 ## Screenshots
 ![screenshot_main](images/screenshot_main.png)
